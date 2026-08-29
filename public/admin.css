@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+:root{--black:#07090d;--yellow:#ffd21c;--red:#ed2a21;--cream:#f5f3e9}
+*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;background:var(--black);color:#111827;font-family:"DM Sans",sans-serif}
+main{max-width:1180px;margin:auto;padding:28px}
+.hidden{display:none!important}
+.login{position:fixed;inset:0;background:var(--black);display:flex;align-items:center;justify-content:center;padding:20px}
+.loginBox{width:min(430px,100%);background:#fffdf5;border-top:7px solid var(--red);border-radius:12px;padding:34px;display:flex;flex-direction:column;gap:14px;box-shadow:12px 12px 0 var(--yellow)}
+.loginBox .logo{font:700 34px/1 "Space Grotesk";color:#101621}.loginBox .logo span{color:var(--yellow)}
+.loginBox p{margin:0;color:#656b75}
+.loginBox input{width:100%;height:48px;padding:0 14px;border:1px solid #d5d2c6;border-radius:5px;background:#fff}
+.loginBox button{width:100%;height:48px;border:0;border-radius:5px;background:var(--yellow);color:#111;font-weight:800;cursor:pointer}
+.loginBox button:hover{background:#f0c400}.loginBox button:disabled{opacity:.6;cursor:not-allowed}
+.loginMsg{min-height:18px;color:var(--red);font-size:12px;font-weight:700}
+.loginBox small{color:#777;font-size:11px;line-height:1.5}
+header{background:var(--black);color:#fff;border-bottom:4px solid var(--yellow);padding:22px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+header h1{margin:0;font:700 29px "Space Grotesk"}header h1 span{color:var(--yellow)}header p{color:#aeb4bf;margin:5px 0 0}
+header button{margin-left:8px;padding:11px 15px;border:0;border-radius:4px;background:var(--yellow);font-weight:700;cursor:pointer}
+section{background:#fffdf7;margin-top:20px;padding:24px;border-radius:10px;border:1px solid #ded9c5}
+section h2{font:600 25px "Space Grotesk";margin:0 0 18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stats div{background:#f0ebd8;border-radius:8px;padding:20px;display:flex;flex-direction:column}.stats b{font-size:25px}.stats small{color:#707680;margin-top:5px}
+form#form{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}form input,form select,form button{padding:12px;border:1px solid #ddd;border-radius:4px}form button{background:var(--yellow);border:0;font-weight:800}
+.row{display:grid;grid-template-columns:70px 2fr 1fr 1fr 90px 100px;gap:12px;align-items:center;border-bottom:1px solid #eee;padding:13px 0}.thumb{width:58px;height:58px;object-fit:cover;border-radius:5px;background:#eee8d7}.row button{padding:8px;border:0;border-radius:4px;background:var(--red);color:#fff;cursor:pointer}.muted{color:#777;font-size:12px}
+.orderRow{display:grid;grid-template-columns:70px 1.5fr 1fr 1fr 1fr 140px;gap:12px;align-items:center;border-bottom:1px solid #eee;padding:14px 0}.orderRow select{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px}.orderItems{font-size:12px;line-height:1.5}
+@media(max-width:800px){main{padding:15px}.stats{grid-template-columns:1fr 1fr}form#form{grid-template-columns:1fr}.row,.orderRow{grid-template-columns:1fr}.row .thumb{width:70px;height:70px}}
+@media(max-width:500px){.stats{grid-template-columns:1fr}.loginBox{padding:26px}}
+
+.rowBtns{display:flex;gap:6px}.rowBtns .editBtn{background:#ffd21c;color:#111}.editModal{display:none;position:fixed;inset:0;background:#0009;z-index:40;align-items:center;justify-content:center;padding:20px}.editModal.show{display:flex}.editBox{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fffdf5;border-top:6px solid #ed2a21;border-radius:10px;padding:28px;position:relative}.editClose{position:absolute;right:12px;top:7px;border:0;background:none;font-size:28px}.editBox h2{font:600 26px "Space Grotesk"}.editBox form{display:grid;grid-template-columns:1fr 1fr;gap:10px}.editBox form input,.editBox form select,.editBox form button{width:100%;padding:11px}.editBox form button{grid-column:1/-1;background:#ffd21c;border:0;font-weight:800}.existingImages{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}.imgPick{width:90px;display:flex;flex-direction:column;gap:4px;font-size:11px}.imgPick img{width:90px;height:70px;object-fit:cover;border-radius:5px;border:1px solid #ddd}.imgPick input{width:auto!important}@media(max-width:700px){.editBox form{grid-template-columns:1fr}}

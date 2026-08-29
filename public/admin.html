@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Memon Communication — Admin</title><link rel="stylesheet" href="admin.css"></head><body><main>
+<div id="login" class="login"><form id="loginForm" class="loginBox" novalidate>
+<div class="logo">MEMON <span>ADMIN</span></div>
+<p>Secure business dashboard</p>
+<input id="u" autocomplete="username" placeholder="Username" required>
+<input id="p" autocomplete="current-password" type="password" placeholder="Password" required>
+<button id="loginBtn" type="submit">Login</button>
+<div id="loginMsg" class="loginMsg" aria-live="polite"></div>
+<small>Default local login: <b>admin</b> / <b>Memon@12345</b></small>
+</form></div><div id="app" class="hidden"><header><div><h1>MEMON <span>ADMIN</span></h1><p>Products & Orders</p></div><div><button onclick="load()">Refresh</button><button onclick="logout()">Logout</button></div></header>
+<section><h2>Dashboard</h2><div class="stats"><div><b id="statProducts">0</b><small>Products</small></div><div><b id="statStock">0</b><small>Total Stock</small></div><div><b id="statOrders">0</b><small>Orders</small></div><div><b id="statSales">PKR 0</b><small>Order Value</small></div></div></section>
+<section><h2>Add Product</h2><form id="form" enctype="multipart/form-data"><input name="name" placeholder="Product name" required><select name="category"><option>Chargers</option><option>Cables</option><option>Airbuds</option><option>Watches</option><option>Power Banks</option><option>Audio</option><option>Accessories</option></select><input name="price" type="number" placeholder="Price" required><input name="stock" type="number" placeholder="Stock" required><input name="description" placeholder="Description"><input name="images" type="file" accept="image/*" multiple><button>Add Product</button></form></section>
+<section><h2>Products</h2><div id="products"></div>
+<div id="editModal" class="editModal"><div class="editBox">
+<button class="editClose" onclick="closeEdit()">×</button><h2>Edit Product</h2>
+<form id="editForm" enctype="multipart/form-data">
+<input type="hidden" name="id"><input name="name" placeholder="Product name" required>
+<select name="category"><option>Chargers</option><option>Cables</option><option>Airbuds</option><option>Watches</option><option>Power Banks</option><option>Audio</option><option>Accessories</option></select>
+<input name="price" type="number" placeholder="Price" required><input name="stock" type="number" placeholder="Stock" required>
+<input name="description" placeholder="Description"><input name="images" type="file" accept="image/*" multiple>
+<div id="existingImages" class="existingImages"></div><button>Save Changes</button>
+</form></div></div></section>
+<section><h2>Orders</h2><div id="orders"></div></section></div></main><script src="admin.js"></script></body></html>

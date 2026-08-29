@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memon Communication | Mobile Accessories</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><div class="nav"><a class="brand" href="#"><b>MEMON</b><small>COMMUNICATION</small></a>
+<nav><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#repair">Repair</a><a href="#contact">Contact</a></nav>
+<div class="navActions"><button id="searchTop">⌕</button><button onclick="openCart()">Cart <span id="count">0</span></button></div></div></header>
+
+<section class="hero"><div class="wrap heroGrid"><div><div class="tag light">MEMON COMMUNICATION • SADDAR KARACHI</div>
+<h1>Mobile accessories.<br><em>Smart choices.</em></h1><p>Accessories, watches, airbuds and everyday tech — with a local repair service you can count on.</p>
+<div><a class="cta" href="#shop">Shop collection →</a><a class="outline" href="https://wa.me/923142232480" target="_blank">WhatsApp us</a></div></div>
+<div class="cardArt"><div class="circle">MC</div><div class="redBar"></div><h3>ALL MOBILE<br>ACCESSORIES</h3><b>WATCH • AIRBUDS<br>REPAIRING</b><small>Mustafa Centre · Saddar · Karachi</small></div></div></section>
+
+<section id="categories" class="wrap section"><div class="tag">SHOP BY CATEGORY</div><h2>Find your everyday tech.</h2><div class="cats">
+<button onclick="choose('Chargers')">⚡<b>Chargers</b><small>Fast charging</small></button><button onclick="choose('Cables')">🔌<b>Cables</b><small>Data & charging</small></button>
+<button onclick="choose('Airbuds')">🎧<b>Airbuds</b><small>Wireless audio</small></button><button onclick="choose('Watches')">⌚<b>Watches</b><small>Smart watches</small></button>
+<button onclick="choose('Power Banks')">🔋<b>Power Banks</b><small>Portable power</small></button><button onclick="choose('Audio')">🔊<b>Audio</b><small>Speakers & more</small></button></div></section>
+
+<section id="shop" class="wrap section"><div class="shopHead"><div><div class="tag">MEMON STORE</div><h2>Featured products.</h2></div><div class="controls"><input id="search" placeholder="Search products…"><select id="filter"><option>All</option><option>Chargers</option><option>Cables</option><option>Airbuds</option><option>Watches</option><option>Power Banks</option><option>Audio</option></select></div></div><div id="products" class="products"></div></section>
+
+<section id="repair" class="repair"><div class="wrap repairGrid"><div><div class="tag light">SERVICE</div><h2>Watch & Airbuds Repairing.</h2></div><p>Bring your compatible watch or earbuds for inspection and repair. Contact the shop for availability, pricing and turnaround.</p><a class="cta" href="tel:03142232480">Call 0314-2232480</a></div></section>
+
+<section id="contact" class="wrap section"><div class="contact"><div><div class="tag">VISIT MEMON</div><h2>Shop #3, Mustafa Centre.</h2><p>Abdullah Haroon Road, Saddar, Karachi.</p><p class="phone">0314-2232480</p></div><div><a class="cta" href="https://wa.me/923142232480" target="_blank">WhatsApp</a><a class="outline dark" href="tel:03142232480">Call now</a></div></div></section>
+<footer><div class="wrap foot"><b>MEMON COMMUNICATION</b><span>© 2026 Memon Communication</span></div></footer>
+
+<div id="modal" class="modal"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<aside id="cart"><div class="cartTop"><h2>Your Cart</h2><button onclick="closeCart()">×</button></div><div id="cartItems"></div><div class="cartBottom"><div class="sum"><span>Subtotal</span><b id="sub">PKR 0</b></div><div class="sum"><span>Delivery</span><b id="del">PKR 0</b></div><div class="sum total"><span>Total</span><b id="total">PKR 0</b></div><button class="checkout" onclick="checkout()">Checkout</button></div></aside><div id="shade" onclick="closeCart()"></div>
+<script src="app.js"></script></body></html>
